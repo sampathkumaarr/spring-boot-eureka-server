@@ -1,15 +1,19 @@
 # Spring Boot Eureka Server
-    This is a sample Spring Boot Eureka Server project.<br />
-    In this project I have integrated with "Log4j2" and "Sleuth" frameworks for better logging.<br />
+    This is a sample Spring Boot Eureka Server project.
+    In this project I have integrated with "Log4j2" and "Sleuth" frameworks for better logging.
 
 # Self-preservation mode:<br />
-    When the Eureka server comes up, it tries to get all of the instance registry information from a neighboring node. <br />
-    If there is a problem getting the information from a node,   the server tries all of the peers before it gives up.<br />
-    If the server is able to successfully get all of the instances, it sets the renewal threshold that it should be receiving based on that information. <br />
+    When the Eureka server comes up, it tries to get all of the instance registry information from a neighboring node.
+    If there is a problem getting the information from a node,   the server tries all of the peers before it gives up.
+    If the server is able to successfully get all of the instances, it sets the renewal threshold that it should be receiving based on that information.
     If any time, the renewals falls below the percent configured for that value (below 85% within 15 mins), the server stops expiring
-    instances to protect the current instance registry information.<br />
-
-In Netflix, the above safeguard is called as self-preservation mode and is primarily used as a protection in scenarios where there is a network partition between a group of clients and the Eureka Server. In these scenarios, the server tries to protect the information it already has. There may be scenarios in case of a mass outage that this may cause the clients to get the instances that do not exist anymore. The clients must make sure they are resilient to eureka server returning an instance that is non-existent or un-responsive. The best protection in these scenarios is to timeout quickly and try other servers.<br />
+    instances to protect the current instance registry information.
+    
+    In Netflix, the above safeguard is called as self-preservation mode and is primarily used as a protection in scenarios where 
+    there is a network partition between a group of clients and the Eureka Server. In these scenarios, the server tries to protect the information it already has. 
+    There may be scenarios in case of a mass outage that this may cause the clients to get the instances that do not exist anymore.
+    The clients must make sure they are resilient to eureka server returning an instance that is non-existent or un-responsive.
+    The best protection in these scenarios is to timeout quickly and try other servers.<br />
 
 If we enable self preservation mode, then we need to set the renewalPercentThreshold properties.<br />
     eureka.server.enableSelfPreservation=false<br />
