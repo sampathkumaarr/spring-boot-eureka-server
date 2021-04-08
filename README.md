@@ -1,5 +1,5 @@
 # Spring Boot Eureka Server
-    This is a sample Spring Boot Eureka Server project.
+    This is a sample Spring Boot Eureka Server project.<br />
     In this project I have integrated with "Log4j2" and "Sleuth" frameworks for better logging.<br />
 
 # Self-preservation mode:<br />
