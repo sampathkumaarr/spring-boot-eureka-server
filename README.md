@@ -1,5 +1,6 @@
 # Spring Boot Eureka Server
-    This is a sample Spring Boot Eureka Server project. In this project I have integrated with "Log4j2" and "Sleuth" frameworks for better logging.<br />
+    This is a sample Spring Boot Eureka Server project.
+    In this project I have integrated with "Log4j2" and "Sleuth" frameworks for better logging.<br />
 
 # Self-preservation mode:<br />
 #Renews: Total number of heartbeats the server received from clients<br />
